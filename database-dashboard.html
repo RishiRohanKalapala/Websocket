@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AImpact & AIdex - Database & Auth Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body class="database-theme">
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h1><span class="highlight">AI</span>mpact</h1>
+                </div>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="user-details">
+                    <h3 id="user-name">Prajwal</h3>
+                    <p id="user-role">Auth & Database</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-database"></i> Databases</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-lock"></i> Authentication</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-user-shield"></i> User Management</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-line"></i> Performance</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-history"></i> Logs</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2>Database & Auth Dashboard</h2>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">2</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span class="badge">1</span>
+                        </button>
+                        <div class="user-dropdown">
+                            <button class="user-btn">
+                                <i class="fas fa-user-circle"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#"><i class="fas fa-user"></i> Profile</a>
+                                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <div class="dashboard-summary">
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Database Instances</h3>
+                            <p class="summary-value">4</p>
+                            <p class="summary-change positive">All Healthy</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Active Users</h3>
+                            <p class="summary-value">248</p>
+                            <p class="summary-change positive">+12 this week</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Auth Requests</h3>
+                            <p class="summary-value">1,842</p>
+                            <p class="summary-change positive">+215 today</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Security Alerts</h3>
+                            <p class="summary-value">0</p>
+                            <p class="summary-change positive">No issues</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card wide">
+                        <div class="card-header">
+                            <h3>Database Performance</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container">
+                                <div class="chart-placeholder">
+                                    <div class="chart-bars">
+                                        <div class="chart-bar" style="height: 60%;"></div>
+                                        <div class="chart-bar" style="height: 40%;"></div>
+                                        <div class="chart-bar" style="height: 70%;"></div>
+                                        <div class="chart-bar" style="height: 65%;"></div>
+                                        <div class="chart-bar" style="height: 80%;"></div>
+                                        <div class="chart-bar" style="height: 75%;"></div>
+                                        <div class="chart-bar" style="height: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Database</th>
+                                        <th>Status</th>
+                                        <th>CPU</th>
+                                        <th>Memory</th>
+                                        <th>Storage</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Main PostgreSQL</td>
+                                        <td><span class="status-badge online">Healthy</span></td>
+                                        <td>24%</td>
+                                        <td>42%</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 65%;"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="icon-btn"><i class="fas fa-eye"></i></button>
+                                            <button class="icon-btn"><i class="fas fa-cog"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Analytics MongoDB</td>
+                                        <td><span class="status-badge online">Healthy</span></td>
+                                        <td>18%</td>
+                                        <td>35%</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 48%;"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="icon-btn"><i class="fas fa-eye"></i></button>
+                                            <button class="icon-btn"><i class="fas fa-cog"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Redis Cache</td>
+                                        <td><span class="status-badge online">Healthy</span></td>
+                                        <td>12%</td>
+                                        <td>78%</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 32%;"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="icon-btn"><i class="fas fa-eye"></i></button>
+                                            <button class="icon-btn"><i class="fas fa-cog"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Elasticsearch</td>
+                                        <td><span class="status-badge online">Healthy</span></td>
+                                        <td>28%</td>
+                                        <td>52%</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 72%;"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="icon-btn"><i class="fas fa-eye"></i></button>
+                                            <button class="icon-btn"><i class="fas fa-cog"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Authentication Activity</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container">
+                                <div class="chart-placeholder">
+                                    <div class="donut-chart">
+                                        <div class="donut-segment" style="--percentage: 98; --fill: var(--success-color);">
+                                            <span class="donut-label">98%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: var(--success-color);"></span>
+                                        <span class="legend-label">Successful Logins</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="status-list">
+                                <li class="status-item">
+                                    <div class="status-label">Failed Logins</div>
+                                    <div class="status-value">
+                                        <span class="status-badge online">2%</span>
+                                    </div>
+                                </li>
+                                <li class="status-item">
+                                    <div class="status-label">Password Resets</div>
+                                    <div class="status-value">
+                                        <span class="status-badge">12 today</span>
+                                    </div>
+                                </li>
+                                <li class="status-item">
+                                    <div class="status-label">New Registrations</div>
+                                    <div class="status-value">
+                                        <span class="status-badge">8 today</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Recent Security Events</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-sync"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="activity-list">
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-title">Multiple failed login attempts</p>
+                                        <p class="activity-time">IP: 192.168.1.45, Today 10:30 AM</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-title">Admin login from new location</p>
+                                        <p class="activity-time">User: Admin, Yesterday 4:15 PM</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-title">Password changed</p>
+                                        <p class="activity-time">User: Dhanush Reddy, Yesterday 2:30 PM</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-title">Database backup completed</p>
+                                        <p class="activity-time">Main PostgreSQL, Nov 14, 2023</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Upcoming Tasks</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="task-list">
+                                <li class="task-item">
+                                    <input type="checkbox" id="task1">
+                                    <label for="task1">Database optimization</label>
+                                    <span class="task-due">Due: Nov 22</span>
+                                </li>
+                                <li class="task-item">
+                                    <input type="checkbox" id="task2">
+                                    <label for="task2">Implement 2FA for all admin users</label>
+                                    <span class="task-due">Due: Nov 25</span>
+                                </li>
+                                <li class="task-item">
+                                    <input type="checkbox" id="task3">
+                                    <label for="task3">Update database schema</label>
+                                    <span class="task-due">Due: Nov 28</span>
+                                </li>
+                                <li class="task-item">
+                                    <input type="checkbox" id="task4">
+                                    <label for="task4">Security audit</label>
+                                    <span class="task-due">Due: Dec 2</span>
+                                </li>
+                                <li class="task-item">
+                                    <input type="checkbox" id="task5">
+                                    <label for="task5">Backup strategy review</label>
+                                    <span class="task-due">Due: Dec 5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="api.js"></script>
+    <script src="login.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="notifications.js"></script>
+    <script src="messaging.js"></script>
+</body>
+</html>

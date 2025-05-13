@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AImpact & AIdex - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body class="admin-theme">
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h1><span class="highlight">AI</span>mpact</h1>
+                </div>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="user-details">
+                    <h3 id="user-name">Admin User</h3>
+                    <p id="user-role">Administrator</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-users"></i> User Management</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-project-diagram"></i> Projects</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-shield-alt"></i> Security</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-history"></i> Audit Logs</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2>Admin Dashboard</h2>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span class="badge">5</span>
+                        </button>
+                        <div class="user-dropdown">
+                            <button class="user-btn">
+                                <i class="fas fa-user-circle"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#"><i class="fas fa-user"></i> Profile</a>
+                                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <div class="dashboard-summary">
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Total Users</h3>
+                            <p class="summary-value">7</p>
+                            <p class="summary-change positive">+1 this week</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Active Projects</h3>
+                            <p class="summary-value">12</p>
+                            <p class="summary-change positive">+2 this month</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Tasks</h3>
+                            <p class="summary-value">48</p>
+                            <p class="summary-change negative">-5 this week</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Issues</h3>
+                            <p class="summary-value">7</p>
+                            <p class="summary-change negative">-3 this week</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card wide">
+                        <div class="card-header">
+                            <h3>User Activity</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container">
+                                <div class="chart-placeholder">
+                                    <div class="chart-bars">
+                                        <div class="chart-bar" style="height: 60%;"></div>
+                                        <div class="chart-bar" style="height: 80%;"></div>
+                                        <div class="chart-bar" style="height: 40%;"></div>
+                                        <div class="chart-bar" style="height: 70%;"></div>
+                                        <div class="chart-bar" style="height: 90%;"></div>
+                                        <div class="chart-bar" style="height: 50%;"></div>
+                                        <div class="chart-bar" style="height: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Recent Logins</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="activity-list">
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-user">Dhanush Reddy</p>
+                                        <p class="activity-time">Today, 9:30 AM</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-user">Prajwal</p>
+                                        <p class="activity-time">Today, 8:45 AM</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-user">Naveen Nunna</p>
+                                        <p class="activity-time">Yesterday, 5:20 PM</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-user">Varshith Goud</p>
+                                        <p class="activity-time">Yesterday, 3:15 PM</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>User Management</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-plus"></i> Add User</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Role</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- User rows will be populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>System Status</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-sync"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="status-list">
+                                <li class="status-item">
+                                    <div class="status-label">Server Status</div>
+                                    <div class="status-value">
+                                        <span class="status-badge online">Online</span>
+                                    </div>
+                                </li>
+                                <li class="status-item">
+                                    <div class="status-label">Database</div>
+                                    <div class="status-value">
+                                        <span class="status-badge online">Operational</span>
+                                    </div>
+                                </li>
+                                <li class="status-item">
+                                    <div class="status-label">API Services</div>
+                                    <div class="status-value">
+                                        <span class="status-badge online">Running</span>
+                                    </div>
+                                </li>
+                                <li class="status-item">
+                                    <div class="status-label">Storage</div>
+                                    <div class="status-value">
+                                        <span class="status-badge warning">78% Used</span>
+                                    </div>
+                                </li>
+                                <li class="status-item">
+                                    <div class="status-label">Memory</div>
+                                    <div class="status-value">
+                                        <span class="status-badge online">42% Used</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="api.js"></script>
+    <script src="login.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="admin.js"></script>
+    <script src="messaging.js"></script>
+    <script src="admin-messaging.js"></script>
+</body>
+</html>

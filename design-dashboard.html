@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AImpact & AIdex - Designer Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body class="designer-theme">
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h1><span class="highlight">AI</span>mpact</h1>
+                </div>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="user-details">
+                    <h3 id="user-name">Naveen Nunna</h3>
+                    <p id="user-role">Designer</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-palette"></i> Projects</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-object-group"></i> UI Components</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-images"></i> Assets</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-tasks"></i> Tasks</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-comments"></i> Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2>Designer Dashboard</h2>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search projects...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">2</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span class="badge">1</span>
+                        </button>
+                        <div class="user-dropdown">
+                            <button class="user-btn">
+                                <i class="fas fa-user-circle"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#"><i class="fas fa-user"></i> Profile</a>
+                                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <div class="dashboard-summary">
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Active Projects</h3>
+                            <p class="summary-value">5</p>
+                            <p class="summary-change positive">+1 this week</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Tasks</h3>
+                            <p class="summary-value">14</p>
+                            <p class="summary-change negative">-2 this week</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Feedback</h3>
+                            <p class="summary-value">8</p>
+                            <p class="summary-change positive">+3 this week</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="summary-details">
+                            <h3>Assets</h3>
+                            <p class="summary-value">124</p>
+                            <p class="summary-change positive">+12 this month</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card wide">
+                        <div class="card-header">
+                            <h3>Current Design Projects</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-plus"></i> New Project</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Project Name</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>Deadline</th>
+                                        <th>Progress</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>AImpact Brand Redesign</td>
+                                        <td>Branding</td>
+                                        <td><span class="status-badge online">In Progress</span></td>
+                                        <td>Nov 28, 2023</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 65%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>User Dashboard UI</td>
+                                        <td>Web Design</td>
+                                        <td><span class="status-badge online">In Progress</span></td>
+                                        <td>Dec 5, 2023</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 40%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mobile App Redesign</td>
+                                        <td>Mobile UI</td>
+                                        <td><span class="status-badge warning">Review</span></td>
+                                        <td>Nov 30, 2023</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 90%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marketing Materials</td>
+                                        <td>Print Design</td>
+                                        <td><span class="status-badge offline">Not Started</span></td>
+                                        <td>Dec 15, 2023</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 0%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email Templates</td>
+                                        <td>Email Design</td>
+                                        <td><span class="status-badge warning">Review</span></td>
+                                        <td>Dec 10, 2023</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 85%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Recent Feedback</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="activity-list">
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-comment"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-title">Mobile App Redesign</p>
+                                        <p class="activity-time">From: Dhanush Reddy, Today</p>
+                                        <p>"The new navigation looks great, but can we adjust the spacing?"</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-comment"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-title">User Dashboard UI</p>
+                                        <p class="activity-time">From: Admin, Yesterday</p>
+                                        <p>"Love the color scheme! Let's proceed with this direction."</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-comment"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p class="activity-title">Email Templates</p>
+                                        <p class="activity-time">From: Prajwal, Nov 14</p>
+                                        <p>"The CTA buttons need to be more prominent."</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Design Assets</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-upload"></i> Upload</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="status-list">
+                                <li class="status-item">
+                                    <div class="status-label">Logo Files</div>
+                                    <div class="status-value">
+                                        <span class="status-badge">24 files</span>
+                                    </div>
+                                </li>
+                                <li class="status-item">
+                                    <div class="status-label">UI Components</div>
+                                    <div class="status-value">
+                                        <span class="status-badge">48 files</span>
+                                    </div>
+                                </li>
+                                <li class="status-item">
+                                    <div class="status-label">Icons</div>
+                                    <div class="status-value">
+                                        <span class="status-badge">36 files</span>
+                                    </div>
+                                </li>
+                                <li class="status-item">
+                                    <div class="status-label">Images</div>
+                                    <div class="status-value">
+                                        <span class="status-badge">16 files</span>
+                                    </div>
+                                </li>
+                                <li class="status-item">
+                                    <div class="status-label">Storage Used</div>
+                                    <div class="status-value">
+                                        <span class="status-badge warning">1.2 GB / 2 GB</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Upcoming Tasks</h3>
+                            <div class="card-actions">
+                                <button><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="task-list">
+                                <li class="task-item">
+                                    <input type="checkbox" id="task1">
+                                    <label for="task1">Finalize logo variations</label>
+                                    <span class="task-due">Due: Nov 20</span>
+                                </li>
+                                <li class="task-item">
+                                    <input type="checkbox" id="task2">
+                                    <label for="task2">Create mobile app mockups</label>
+                                    <span class="task-due">Due: Nov 22</span>
+                                </li>
+                                <li class="task-item">
+                                    <input type="checkbox" id="task3">
+                                    <label for="task3">Design email newsletter template</label>
+                                    <span class="task-due">Due: Nov 24</span>
+                                </li>
+                                <li class="task-item">
+                                    <input type="checkbox" id="task4">
+                                    <label for="task4">Update style guide documentation</label>
+                                    <span class="task-due">Due: Nov 28</span>
+                                </li>
+                                <li class="task-item">
+                                    <input type="checkbox" id="task5">
+                                    <label for="task5">Create data visualization components</label>
+                                    <span class="task-due">Due: Dec 2</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="api.js"></script>
+    <script src="login.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="notifications.js"></script>
+    <script src="messaging.js"></script>
+</body>
+</html>
